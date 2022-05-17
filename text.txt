@@ -1,0 +1,3 @@
+We can see that the read() method returns a newline as '\n'. Once the end of the file is reached, we get an empty string on further reading.
+
+We can change our current file cursor (position) using the seek() method. Similarly, the tell() method returns our current position (in number of bytes).
