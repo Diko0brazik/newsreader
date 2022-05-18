@@ -2,7 +2,7 @@ import psycopg2
 
 def main():
     pass
-    conn = psycopg2.connect(dbname='newswords', user='newswords', 
+    conn = psycopg2.connect(dbname='postgres', user='postgres', 
                                     password='123',     host='localhost')
     conn.autocommit = True
     c = conn.cursor()
