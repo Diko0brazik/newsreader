@@ -1,9 +1,6 @@
-
 import requests_html
 from requests_html import HTMLSession
-import psycopg2
 from collections import OrderedDict
-import re
 from writetobasetxt import base
 from datetime import datetime, timezone
 
@@ -14,16 +11,10 @@ from datetime import datetime, timezone
 #https://habr.com/ru/post/349860/
 
 def main():
-    #txt = 'ПРивет аопр лдов. ываыва! ываыва ываыва fgh fgh '
-    #txt = readtext('Путеводитель по миру паранормальных явлений.fb2')
      
     txt = readInvestingcom()
-    #di = countWordsInTxt(txt)
-    #writeToBase(di)
-    #di = {"te":34, 're':32 }
-    #writeToBase(di)
-    return(None)
 
+    return(None)
 
 
 def readInvestingcom():
@@ -55,21 +46,6 @@ def getAPtegs(r):
     txt.extend(txt3)
     return(txt)
 
-
-
-
-
-
-
-
-
-
-
-
-def readtext(fname="text.txt"): # delete
-    with open(fname, encoding="utf-8") as f: #errors="ignore"
-        txt = f.read()
-    return(txt)
 
 if __name__ == "__main__":
     main()
