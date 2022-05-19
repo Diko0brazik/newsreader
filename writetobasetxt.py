@@ -2,10 +2,12 @@ import psycopg2
 import re
 from datetime import datetime, timezone
 from collections import OrderedDict
+import dbconnect
 
 def main():
     txt = 'fg fg sdddddd'
-    writetobasetxt(txt)
+    b = base()
+    b.writetobasetxt(txt, 'test.site', 'test.section')
     pass
 
 # def writetobasetxt(txt,  site, sectionOfSite, date, base = None):
@@ -17,8 +19,7 @@ def main():
 class base():
 
     def __init__(t):
-        t.conn = psycopg2.connect(dbname='newswords', user='newswords', 
-                                password='123',     host='localhost')
+        t.conn = dbconnect.conn()
         t.conn.autocommit = True
         t.date = datetime.now(timezone.utc)
         t.basename = 'words'
@@ -55,6 +56,8 @@ class base():
         di = t.countWordsInTxt(txt)
         c = t.conn.cursor()
         li = [(i, di[i], date, site, sectionOfSite) for i in di ]
+        print(f'''write to base {len(li)} rows, date: {date.strftime("%Y-%m-%d, %H:%M")}, 
+                                site: {site}, section: {sectionOfSite}''')
         c.executemany(f''' insert into {basename} (word, count, timestamp, site, section) values(%s,%s,%s,%s,%s) ''', li)
 
 

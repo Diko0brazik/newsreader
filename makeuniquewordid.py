@@ -1,10 +1,11 @@
 import psycopg2
+import dbconnect
 
 
 def main():
-
-    conn = psycopg2.connect(dbname='newswords', user='newswords', 
-                                    password='123',     host='localhost')
+    conn = dbconnect.conn()
+    # conn = psycopg2.connect(dbname='newswords', user='newswords', 
+    #                                 password='123',     host='localhost')
     conn.autocommit = True
     c = conn.cursor()
 

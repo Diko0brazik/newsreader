@@ -1,9 +1,10 @@
 import psycopg2
+import dbconnect
 
 def main():
-    pass
-    conn = psycopg2.connect(dbname='postgres', user='postgres', 
-                                    password='123',     host='localhost')
+    conn = dbconnect.conn()
+    # conn = psycopg2.connect(dbname='postgres', user='postgres', 
+    #                                 password='123',     host='localhost')
     conn.autocommit = True
     c = conn.cursor()
     c.execute(
@@ -28,7 +29,7 @@ ALTER TABLE IF EXISTS public.words
     
     c.execute(
 '''
-CREATE TABLE public.dictioanry
+CREATE TABLE public.dictionary
 (
     id integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 ),
     word text
