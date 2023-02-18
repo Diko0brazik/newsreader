@@ -1,5 +1,11 @@
-collect data every hour
-view data from hour, day
-compare data bitween day to day, hour to hour
-word stop list for disable word like 'if' , 'in' , etc
-make readbloomberg.comp
+make databae embededded in python
+
+
+1 collect data every hour
+0 view data from hour, day
+0 compare data bitween day to day, hour to hour
+0 word stop list for disable word like 'if' , 'in' , etc
+0 make readbloomberg.comp
+
+0 write telegramm bot for control data
+

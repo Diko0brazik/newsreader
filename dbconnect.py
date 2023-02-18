@@ -1,7 +1,13 @@
+from tkinter.tix import Tree
 import psycopg2
 
 def main():
     pass
+
+def cursor():
+    cn = conn()
+    cn.autocommit(True)
+    return(cn.cursor())
 
 def conn():
     return(connect5())
