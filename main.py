@@ -1,4 +1,5 @@
 from word.engine import wordengine
+from base.engine import base
 
 
 
@@ -11,8 +12,15 @@ def main_loop():
         sites = loadparcers()
         
         # Parce information from parcers
-        for parcer in parcers:
-            txt = parcer.txt()
+        for site in sites:
+            #fetch txt from site
+            # process txt to words list
+            wordlist = wordengine(site.txt())
+            #wordlist = 
+            base.insert(wordlist, site.name())
+
+
+
 
         
 
