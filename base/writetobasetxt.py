@@ -2,7 +2,7 @@ import psycopg2
 import re
 from datetime import datetime, timezone
 from collections import OrderedDict
-import dbconnect
+import old.dbconnect as dbconnect
 
 def main():
     txt = 'fg fg sdddddd'

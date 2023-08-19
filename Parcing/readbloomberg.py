@@ -8,7 +8,7 @@ class bloomberg(parcing_c):
     def connection_to_site(): #TODO 1) write connection,  2) move connection to parent class
         pass
 
-    def parcing():
+    def txt():
         # return plain txt from site
         txt = " asdfdds asfdg a afg afa fdg" # TODO create parcing
         return txt 

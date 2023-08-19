@@ -1,4 +1,4 @@
-import dbconnect
+import old.dbconnect as dbconnect
 
 def main():
     words()
