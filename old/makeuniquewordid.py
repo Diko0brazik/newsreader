@@ -1,5 +1,5 @@
-import psycopg2
-import dbconnect
+ import psycopg2
+import old.dbconnect as dbconnect
 
 
 def main():
