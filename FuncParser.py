@@ -28,3 +28,15 @@ directory_path = "/path/to/your/directory"
 function_to_search = "your_function_name"
 
 search_and_import_functions(directory_path, function_to_search)
+
+def main()
+    dirpath='.\Parcing\'
+    filelist = getfilelist(dirpath)
+    listoffunctions = []
+    for file in filelist:
+        from Parcing import file
+        listoffunctions.append(file.parcing)
+    return listoffunctions
+
+if __name__ == '__main__':
+    main()
