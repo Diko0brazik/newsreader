@@ -9,12 +9,12 @@ def main():
     c = conn.cursor()
 
     sql = ''' select word, sum(count) c from words where timestamp between '2022-05-18' and '2022-05-19' 
-    group by word order by c desc'''
+    group by word order by c desc''
 
     c.execute(sql)
     r = c.fetchall()
 
-    
+    '''
 
     pass
 
